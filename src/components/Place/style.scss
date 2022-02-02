@@ -1,0 +1,24 @@
+.place {
+    padding: 0px 30px;
+    margin: 90px 0px 0px 0px;
+    // border-left: 3px solid rgba(29, 29, 29, 0.15);
+    padding-bottom: 70px;
+
+    .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .name {
+            text-align: start;
+        }
+        > .date {
+            text-align: end;
+        }
+    }
+
+    .divider {
+        height: 8px;
+        margin: 90px 0px 0px 0px;
+        border-bottom: 3px solid rgba(29, 29, 29, 0.15);
+    }
+}
