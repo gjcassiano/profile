@@ -1,7 +1,12 @@
 .body {
-    margin: 145px 40px;
+    margin: 165px 10px;
     max-width: 1000px;
     font-size: 1.5rem;
     line-break: auto;
-    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .body {
+        margin: 265px 10px;
+    }
 }

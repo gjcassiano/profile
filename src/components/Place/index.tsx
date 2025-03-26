@@ -16,7 +16,6 @@ function Place(props: any) {
 
             {props.children}
             <div className="divider">
-                <i>//</i>
             </div>
         </div>
     );

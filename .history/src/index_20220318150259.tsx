@@ -1,22 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import ReactGA from "react-ga";
-import { BrowserRouter, Navigate, useRoutes } from "react-router-dom";
+import { BrowserRouter, useRoutes } from "react-router-dom";
 import Profile from "./components/Profile";
 import About from "./components/About";
 import App from "./App";
 import Skills from "./components/Skills";
-import Rose from "./components/Rose";
 ReactGA.initialize("G-YEMC9Q838Q");
 
 const RouterApp = () => {
+
+    useEffect(() => {
+        document.title = "Giovani's Profile"
+     }, []);
      
     let routes = useRoutes([
         {
             path: "/",
-            element: <Navigate to="/profile" replace />,
+            element: (
+                <App>
+                    <About />
+                </App>
+            ),
         },
         {
             path: "profile",
@@ -40,12 +47,6 @@ const RouterApp = () => {
                 <App>
                     <Skills />
                 </App>
-            ),
-        },
-        {
-            path: "meu-bem",
-            element: (
-                    <Rose />
             ),
         },
     ]);

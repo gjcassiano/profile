@@ -4,6 +4,9 @@ import "./style.scss";
 function Body(props: any) {
     return (
         <div className="body">
+            {/* <BrowserRouter> */}
+            {/* <App></App> */}
+            {/* </BrowserRouter> */}
             {props.children}
         </div>
     );

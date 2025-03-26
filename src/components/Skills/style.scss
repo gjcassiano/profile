@@ -1,10 +1,10 @@
 .card {
     border-radius: 3px;
     padding: 20px;
-    margin: 10px;
+    margin: 8px;
     border: 1px solid rgb(29, 29, 29, 0.75);
     user-select: none;
-    cursor: pointer;
+    // cursor: pointer;
     font-size: 1.7rem;
 }
 
@@ -13,10 +13,10 @@
     font-size: 1.6rem;
     margin: 10px 0px;
     line-height: 2rem;
-    margin: 40px;
+    margin: 40px 0px;
 }
 .skills {
     display: flex;
     flex-flow: wrap;
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
 }

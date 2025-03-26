@@ -7,13 +7,23 @@ import Y2020 from "../Jobs/Y2020";
 import Place from "../Place";
 
 import "./style.scss";
+import Y2022 from "../Jobs/Y2022";
 
 function Profile(props: any) {
     return (
-        <>
+        <>  
+            <Place
+                name="Bees Brasil (AB InBev)"
+                date="Abril 2nd 2022 ongoing"
+            >
+                <Job date="2022 to ongoing">
+                    <Y2022></Y2022>
+                </Job>
+
+            </Place>
             <Place
                 name="Instituto de Pesquisas Eldorado"
-                date="January 2nd 2018 ongoing"
+                date="January 2nd 2018 to 2022"
             >
                 <Job date="2020 to 2022">
                     <Y2020></Y2020>

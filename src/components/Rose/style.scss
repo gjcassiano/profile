@@ -1,0 +1,197 @@
+$background: #fee2e9;
+$light-pink: #fcbbcc;
+$pink: #fba7bd;
+$dark-pink: #f980a1;
+$shadow: #e8c5d0;
+$cardd: white;
+$heart: #f40b4a;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: Solitreo;
+}
+
+.rose {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $background;
+    font-family: "Pangolin", cursive;
+    font-size: 2vmin;
+}
+
+.container {
+    position: relative;
+    top: 0vmin;
+}
+
+.envelope {
+    position: relative;
+    background: $dark-pink;
+    height: 30vmin;
+    width: 47.9vmin;
+}
+
+.cardd {
+    position: absolute;
+    background: $cardd;
+    height: 25vmin;
+    width: 45vmin;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 1.5vmin;
+    top: 0vmin;
+
+    animation: slide-rev 0.2s ease-out;
+}
+
+.message {
+    position: absolute;
+    top: 1vmin;
+    // font-size: 1rem;
+}
+
+.cover {
+    position: absolute;
+    height: 0;
+    width: 0;
+
+    border-bottom: 15vmin solid $pink;
+    border-left: 24vmin solid transparent;
+    border-right: 24vmin solid transparent;
+    top: 15vmin;
+    z-index: 3;
+}
+
+.cover::after {
+    /*left triangle*/
+    position: absolute;
+    content: "";
+    border-left: 24.5vmin solid $light-pink;
+    border-bottom: 15vmin solid transparent;
+    border-top: 15vmin solid transparent;
+    top: -15vmin;
+    left: -24vmin;
+}
+
+.cover::before {
+    position: absolute;
+    content: "";
+    border-right: 24.5vmin solid $light-pink;
+    border-bottom: 15vmin solid transparent;
+    border-top: 15vmin solid transparent;
+    top: -15vmin;
+    left: -0.5vmin;
+}
+
+.lid {
+    position: absolute;
+    height: 0;
+    width: 0;
+
+    border-top: 15vmin solid $dark-pink;
+    border-left: 24vmin solid transparent;
+    border-right: 24vmin solid transparent;
+
+    top: 0;
+    transform-origin: top;
+    animation: open-rev 2s;
+}
+
+.container:hover .lid {
+    animation: open 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.container:hover .cardd {
+    animation: slide 0.2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.shadow {
+    position: relative;
+    top: 3vmin;
+    border-radius: 50%;
+    opacity: 0.7;
+    height: 2vmin;
+    width: 48vmin;
+    background: $shadow;
+}
+
+.us {
+    display: block;
+    z-index: 3;
+    justify-content: center;
+
+}
+
+.us img {
+    width: 96%;
+    height: auto;
+    border-radius: 50%;
+    border: 10px solid #fff;
+}
+
+.heart {
+    position: relative;
+    width: 0vmin;
+    height: 10vmin;
+    top: 0vmin;
+    left: 0vmin;
+}
+
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 2.5vmin;
+    top: 10vmin;
+    width: 2.5vmin;
+    height: 4vmin;
+    background: $heart;
+    border-radius: 2.5vmin 2.5vmin 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+@keyframes open {
+    100% {
+        transform: rotatex(180deg);
+    }
+}
+
+@keyframes slide {
+    100% {
+        transform: translatey(-25vmin);
+        z-index: 2;
+    }
+}
+
+@keyframes open-rev {
+    from {
+        transform: rotatex(-180deg);
+    }
+}
+
+@keyframes slide-rev {
+    from {
+        transform: translatey(-25vmin);
+    }
+}

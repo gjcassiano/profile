@@ -1,28 +1,36 @@
 .header {
-    user-select: none;
-    top: 0px;
-    padding: 20px 0px 10px 0px;
-    position: fixed;
-    font-size: 2.5rem;
-    font-weight: 300;
-    line-height: 1.2;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
     width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 18px 0 rgb(0 0 0 / 8%), 0 -1px 5px 0 rgb(0 0 0 / 12%);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    
+    // box-shadow:0 2px 18px 0 rgba(0,0,0,.08),0 -1px 5px 0 rgba(0,0,0,.12);
+    max-width: 1000px;
+    
+    position: fixed;
+    top: 0px;
+    .container {
+        margin: 0px 10px;
+        user-select: none;
+        
+        padding: 20px 0px 10px 0px;
+        font-size: 2.5rem;
+        font-weight: 300;
+        line-height: 1.2;
+        display: flex;
+        flex-direction: column;
+    
+    }
+
     span {
         font-size: 1.5rem;
-        line-height: 1;
+        // line-height: 1;
     }
     .links span {
         cursor: pointer;
         font-size: 1.2rem;
-        padding: 5px;
+        padding: 5px 10px;
 
         opacity: 0.6;
         &.active {
@@ -33,5 +41,61 @@
 
     .links span:hover {
         opacity: 1;
+    }
+}
+
+.actions {
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.divider-header {
+    position:fixed;
+    left: 0;
+    top: 160px;
+    height: 1px;
+    width: 100%;
+    box-shadow: 0 2px 18px 0 rgba(0, 0, 0, .08), 0 -1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.info-actions {
+    img {
+        width: 2.4rem;
+    }
+    small {
+        // font-size: 0rem;
+        text-align: end;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+    }
+    .link-social {
+        padding: 2px;
+        opacity: 0.6;
+        img {
+            height: 3rem;
+        }
+    }
+
+    .link-social :hover {
+        opacity: 0.4;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .actions {
+        flex-direction: column;
+    
+    }
+    .divider-header {
+        top: 190px;
+    }
+    .container strong{
+        font-size: 2rem;
+    }
+    .container span{
+        font-size: 1rem;
     }
 }

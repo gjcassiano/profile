@@ -3,20 +3,22 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import ReactGA from "react-ga";
-import { BrowserRouter, Navigate, useRoutes } from "react-router-dom";
+import { BrowserRouter, useRoutes } from "react-router-dom";
 import Profile from "./components/Profile";
 import About from "./components/About";
 import App from "./App";
 import Skills from "./components/Skills";
-import Rose from "./components/Rose";
 ReactGA.initialize("G-YEMC9Q838Q");
 
 const RouterApp = () => {
-     
     let routes = useRoutes([
         {
             path: "/",
-            element: <Navigate to="/profile" replace />,
+            element: (
+                <App>
+                    <About />
+                </App>
+            ),
         },
         {
             path: "profile",
@@ -30,7 +32,7 @@ const RouterApp = () => {
             path: "about",
             element: (
                 <App>
-                    <About />
+                    <About />i
                 </App>
             ),
         },
@@ -42,15 +44,8 @@ const RouterApp = () => {
                 </App>
             ),
         },
-        {
-            path: "meu-bem",
-            element: (
-                    <Rose />
-            ),
-        },
     ]);
     return routes;
-    
 };
 
 ReactDOM.render(
