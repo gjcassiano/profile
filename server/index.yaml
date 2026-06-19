@@ -1,0 +1,6 @@
+indexes:
+
+- kind: PokerSession
+  properties:
+  - name: roomId
+  - name: lastSeen

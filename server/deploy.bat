@@ -1,1 +1,0 @@
-gcloud app deploy app.yaml -v 1 --project giovanic --quiet --no-promote
